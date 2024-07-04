@@ -1,3 +1,4 @@
+var all_correct = [false,false,false]
 
 function click_input(){
     console.log("test");
@@ -9,28 +10,32 @@ function click_input(){
     }
 }
 
-function password_input(divID,inputID,answer){
+function password_input(divID,inputID,answer,num){
     console.log("hi");
     let input = document.getElementById(inputID).value;
     if(input.toLowerCase() == answer.toLowerCase()){
         console.log("There");
         document.getElementById(divID).style.color = "green";
+        all_correct[num] = true
     }
     else{
         document.getElementById(divID).style.color = "red";
+        all_correct[num] = false
     }
+    check_if_done()
 }
 
 let all_artifact_inputs;
 
 function submit_artifacts(){
+    var is_good = true
     let all_answers = [
         ["Hat","The Hat","Cap","Top Hat"],
         ["Glasses","Eye","Haunter","The Haunter of the Dark","The Glasses","The Eye"],
         ["Pendant","Necklace","The Pendant","The Necklace"],
         ["Cloak","The Cloak"],
         ["The Scepter","Scepter","Staff","The Staff"],
-        ["Gauntlet","The Gauntlet","Gloves","The Gloves"],
+        ["Gauntlet","The Gauntlet","Gloves","The Gloves","Glove"],
         ["The Crown","Crown"],
         ["Ring","The Ring"]
     ];
@@ -52,16 +57,17 @@ function submit_artifacts(){
         }
         if(found == false){
             document.getElementById("Artifact_Div" + i).style.backgroundColor = 'red';
+            is_good = false
         }
     }
+    return is_good
 }
 
 function check_if_done(){
-
-}
-
-function check_a_div(){
-
+    if(submit_artifacts() && all_correct[0] && all_correct[1] && all_correct[2]){
+        //Everything is correct!
+        window.location.replace("wanted.html");
+    }
 }
 
 function init(){

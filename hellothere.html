@@ -16,23 +16,23 @@
         <div class="Password" id="book-pass">
             <h2>Hint: Book</h2>
             <input id="Book">
-            <button onclick="password_input('book-pass','Book','War')"> Submit</button>
+            <button onclick="password_input('book-pass','Book','War',0)"> Submit</button>
         </div>
         <div class="Password" id="video-pass">
-            <h2>Hint: Video</h2>
+            <h2>Hint: Mail</h2>
             <input id="Video">
-            <button onclick="password_input('video-pass','Video','is')"> Submit</button>
+            <button onclick="password_input('video-pass','Video','is',1)"> Submit</button>
         </div>
         <div class="Password" id="mail-pass">
-            <h2>Hint: Mail</h2>
+            <h2>Hint: Candy</h2>
             <input id="Mail">
-            <button onclick="password_input('mail-pass','Mail','Fake')"> Submit</button>
+            <button onclick="password_input('mail-pass','Mail','Fake',2)"> Submit</button>
         </div>
 
         <h1>And Name every single Artifact</h1>
         <div id="Artifacts">
             <!-- JS does shit with this div -->
         </div>
-        <button onclick="submit_artifacts()">Submit Artifacts</button>
+        <button onclick="check_if_done()">Submit Artifacts</button>
     </body>
 </html>
