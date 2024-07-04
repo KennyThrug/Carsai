@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<script src="scripts.js"></script>
+
+    <style>
+        .Password{
+            margin-top: 5%;
+        }
+    </style>
+    <title>Seriously this is it</title>
+    <body onload="init()">
+        <!-- Wow, Cheater. Looking at the Source code -->
+        <!-- Nah but seriously this is a valid way to get these answers its intentional -->
+        <h1>
+            Final Passwords:
+        </h1>
+        <div class="Password" id="book-pass">
+            <h2>Hint: Book</h2>
+            <input id="Book">
+            <button onclick="password_input('book-pass','Book','War')"> Submit</button>
+        </div>
+        <div class="Password" id="video-pass">
+            <h2>Hint: Video</h2>
+            <input id="Video">
+            <button onclick="password_input('video-pass','Video','is')"> Submit</button>
+        </div>
+        <div class="Password" id="mail-pass">
+            <h2>Hint: Mail</h2>
+            <input id="Mail">
+            <button onclick="password_input('mail-pass','Mail','Fake')"> Submit</button>
+        </div>
+
+        <h1>And Name every single Artifact</h1>
+        <div id="Artifacts">
+            <!-- JS does shit with this div -->
+        </div>
+        <button onclick="submit_artifacts()">Submit Artifacts</button>
+    </body>
+</html>
